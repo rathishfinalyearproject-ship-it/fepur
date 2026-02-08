@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction History</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header>
+    <h1>Prediction History</h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Predict MPG</a></li>
+      <li><a href="history.html" class="active">History</a></li>
+      <li><a href="trends.html">Trends</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card history-card">
+      <div class="search-container">
+        <input type="text" id="search-history" placeholder="Search history...">
+      </div>
+      <div class="table-wrapper">
+        <table id="history-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Engine CC</th>
+              <th>Horsepower</th>
+              <th>Weight</th>
+              <th>Cylinders</th>
+              <th>Transmission</th>
+              <th>Cooling System</th>
+              <th>Predicted MPG</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Popup for vehicle details -->
+  <div id="popup" class="popup" style="display:none;">
+    <div class="popup-content">
+      <span id="close-popup" style="cursor:pointer;">&times;</span>
+      <div id="popup-data"></div>
+      <div id="popup-tips"></div>
+      <button id="copy-btn">Copy</button>
+      <button id="delete-btn">Delete</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
