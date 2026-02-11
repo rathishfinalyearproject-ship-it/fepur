@@ -13,7 +13,7 @@ const supabaseClient = supabase.createClient(
 // Generate simple MPG prediction (placeholder)
 function predictMPG(data) {
     // Example formula: MPG decreases with weight & engine, increases with cylinders
-    let mpg = (((1000 / (data.engine_cc * 0.05 + data.horsepower * 0.03 + data.weight * 0.002 + data.cylinders * 0.5))/2)*0.8)*1.254;
+    let mpg = ((1000 / (data.engine_cc * 0.05 + data.horsepower * 0.03 + data.weight * 0.002 + data.cylinders * 0.5))/2);
     return Math.round(mpg * 10) / 10;
 }
 
@@ -249,4 +249,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadHistory();
     loadTrends();
 });
+
 
