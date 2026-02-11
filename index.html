@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predict New MPG</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="main.py"></script>
+</head>
+<body>
+  <header>
+    <h1>🏍️Fuel Efficiency Prediction⛽</h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="active">Predict MPG</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="trends.html">Trends</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card prediction-card">
+      <form id="prediction-form">
+        <input type="number" name="engine_cc" placeholder="Engine CC" required>
+        <input type="number" name="horsepower" placeholder="Horsepower" required>
+        <input type="number" name="weight" placeholder="Weight (lbs)" required>
+        <input type="number" name="cylinders" placeholder="Cylinders" required>
+
+        <div class="radio-group">
+          <label>Transmission:</label>
+          <label><input type="radio" name="transmission" value="Automatic" required> Automatic</label>
+          <label><input type="radio" name="transmission" value="Manual"> Manual</label>
+        </div>
+
+        <div class="radio-group">
+          <label>Cooling System:</label>
+          <label><input type="radio" name="cooling_system" value="Air" required> Air</label>
+          <label><input type="radio" name="cooling_system" value="Liquid"> Liquid</label>
+        </div>
+
+        <button type="submit">Predict MPG</button>
+      </form>
+      <div id="result" class="result-card"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
