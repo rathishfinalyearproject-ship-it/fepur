@@ -2,7 +2,7 @@
 // Initialize supabaseClient
 // ========================
 const supabaseClient = supabase.createClient(
-  'https://mkqotuipaxokxvclthjq.supabase.co',
+  'https://fepur.rathishfinalyearproject.workers.dev',
   'sb_publishable_1Pb-i5OnGXkvUnRKWwdqUg_nsEVwFfp'
 );
 
